@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>45rpm Singles</h1>
+<table class='table'>
+    <tr>
+        <th>Artist</th>
+        <th>Label</th>
+        <th>Year</th>
+        <th>Side 1</th>
+        <th>Side 2</th>
+        <th>Review</th>
+    </tr>
+    {% for f in fortyfive_list %}
+    <tr>
+        <td><a href="{% url 'fortyfivedetails' id=f.id%}"> {{ f.artistname }}</a></td>
+        <td>{{ f.label }}</td>
+        <td>{{ f.year }}</td>
+        <td>{{ f.sideone }}</td>
+        <td>{{ f.sidetwo }}</td>
+        <td>{{ f.review }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

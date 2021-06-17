@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Forty Fives</title>
+        <title>Tech Reviews</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
@@ -10,18 +10,22 @@
     </head>
     <body>
         <div class='jumbotron' style="background-color: Navy; color: white;">
-            <h1>Forty Fives</h1>
+            <h1>45 RPM Records</h1>
         </div>
         <nav class="navbar navbar-default">
                 <div class="container-fluid">
                 <div class="navbar-header">
-                <a class="navbar-brand" href="{% url 'index' %}">Forty Fives</a>
+                <a class="navbar-brand" href="{% url 'index' %}">Forty-Fives</a>
                 </div>
                 <ul class="nav navbar-nav">
-                   <li><a href="{% url 'events' %}">Events</a></li>
-                   <li><a href="{% url 'login' %}">Login</a></li>
+                    <li><a href="{% url 'events' %}">Events</a></li>
+                    <li><a href="{% url 'newevent' %}">Add Event</a></li>
+                    <li><a href="{% url 'fortyfives' %}">45s</a></li>
+                    <li><a href="{% url 'newfortyfive' %}">Add 45</a></li>                  
+                    <li><a href="{% url 'recordstores' %}">Record Stores</a></li>                  
+                    <li><a href="{% url 'venues' %}">Venues</a></li>
+                    <li><a href="{% url 'login' %}">Login</a></li>
                     <li><a href="{% url 'logout' %}">Logout</a></li>
-                   <li>Dummy</li>
                 </ul>
                 </div>
                 </nav>

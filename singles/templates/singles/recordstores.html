@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Record Stores</h1>
+<table class='table'>
+    <tr>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Hours</th>
+        <th>Website</th>
+        <th>Description</th>
+    </tr>
+    {% for r in recordstore_list %}
+    <tr>
+        <td>{{ r.storename }}</td>
+        <td>{{ r.storelocation }}</td>
+        <td>{{ r.businesshours }}</td>
+        <td>{{ r.website }}</td>
+        <td>{{ r.description }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
